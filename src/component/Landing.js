@@ -7,8 +7,8 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import img1 from '../images/20.jpg';
-import img2 from '../images/21.png';
+// import img1 from '../images/20.jpg';
+// import img2 from '../images/21.png';
 import CssBaseline from "@mui/material/CssBaseline";
 import {createTheme} from "@mui/material/styles";
 import {ThemeProvider} from "@emotion/react";
@@ -62,10 +62,10 @@ const Landing = ()=> {
                         showThumbs={false}
                     >
                         <div>
-                            <img src={img1} alt="Wood Product 1" />
+                            <img src="https://fastly.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0" alt="Wood Product 1" />
                         </div>
                         <div>
-                            <img src={img2} alt="Wood Product 2" />
+                            <img src="https://fastly.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0" alt="Wood Product 2" />
                         </div>
                         {/* Add more carousel items as needed */}
                     </Carousel>
