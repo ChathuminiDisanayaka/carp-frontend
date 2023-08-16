@@ -1,4 +1,3 @@
-
 import Product from "./component/Product";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
