@@ -1,3 +1,4 @@
+
 import Product from "./component/Product";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
@@ -20,15 +21,6 @@ function App() {
               <Footer />
           </div>
       </BrowserRouter>
-
-      // <div>
-      //     <Header/>
-      //     <Landing/>
-      //     <Product/>
-      //     <Footer/>
-      //     {/*<ProductView/>*/}
-      //     <ProductAdd/>
-      // </div>
 
   );
 }
