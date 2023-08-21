@@ -11,7 +11,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {TextField} from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import {useEffect, useState} from "react";
+import ProductService from "../service/ProductService";
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -19,6 +20,16 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const defaultTheme = createTheme();
 
 const Product = ()=>{
+
+    const [products,setProducts]=useState([]);
+
+    useEffect(()=>{
+        ProductService.getProducts().then(res=>{
+            setProducts(res.data);
+        })
+    })
+
+
 
     // const navigate = useNavigate();
     //
@@ -70,8 +81,8 @@ const Product = ()=>{
                 <Container sx={{ py: 8 }} maxWidth="xl">
                     {/* End hero unit */}
                     <Grid container spacing={4}>
-                        {cards.map((card) => (
-                            <Grid item key={card} xs={12} sm={6} md={4}>
+                        {products.map((product) => (
+                            <Grid item key={product} xs={12} sm={6} md={4}>
                                 <Card
                                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                                 >
@@ -85,11 +96,10 @@ const Product = ()=>{
                                     />
                                     <CardContent sx={{ flexGrow: 1 }}>
                                         <Typography gutterBottom variant="h5" component="h2">
-                                            Wood Chair
+                                            {product.name}
                                         </Typography>
                                         <Typography>
-                                            This is a media card. You can use this section to describe the
-                                            content.
+                                            {product.quantity}
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
