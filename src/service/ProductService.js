@@ -4,8 +4,8 @@ const PRODUCT_API_BASE_URL = "http://localhost:8090/api/product/getProducts";
 const ADD_PRODUCT_API_BASE_URL = "http://localhost:8090/api/v1/saveProduct";
 class ProductService{
     getProducts(){
-        return axios.get(PRODUCT_API_BASE_URL);
         console.log("hii");
+        return axios.get(PRODUCT_API_BASE_URL);
     }
 
     saveProducts(product){
